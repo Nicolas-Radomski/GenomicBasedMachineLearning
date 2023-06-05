@@ -248,7 +248,7 @@ docker run --name nicolas --rm -v $(pwd):/wk -w /wk --ulimit stack=100000000 -e 
 - test_saved_data.RData
 - test_saved_images.RData
 # Illustration
-![PCA figure](https://github.com/Nicolas-Radomski/GenomicBasedMachineLearning/blob/main/illustration.png)
+![workflow figure](https://github.com/Nicolas-Radomski/GenomicBasedMachineLearning/blob/main/illustration.png)
 # Reference
 - Pierluigi Castelli, Andrea De Ruvo, Andrea Bucciacchio, Nicola D'Alterio, Cesare Camma, Adriano Di Pasquale and Nicolas Radomski (2023) Source attribution of Listeria monocytogenes through a versatile supervised machine learning workflow based on genomic data (under reviewing)
 - Docker Hub: https://hub.docker.com/r/nicolasradomski/genomicbasedmachinelearning
