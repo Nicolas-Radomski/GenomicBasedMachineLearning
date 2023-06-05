@@ -86,9 +86,9 @@ sample				phenotype	dataset
 2016.TE.28410.1.48.1		pig		training
 2016.TE.3350.1.18.1		pig		training
 2016.TE.4440.1.41.1		pig		training
-2018.TE.15762.1.12.1		poultry	training
-2019.TE.1226.1.3.1		poultry	training
-2019.TE.1367.1.9.1		poultry	training
+2018.TE.15762.1.12.1		poultry		training
+2019.TE.1226.1.3.1		poultry		training
+2019.TE.1367.1.9.1		poultry		training
 2019.TE.602.1.8.1		cow		testing
 2020.TE.156004.1.4.1		cow		training
 ```
