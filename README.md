@@ -21,10 +21,10 @@ The R script GenomicBasedMachineLearning.R was prepared and tested with R versio
 ### Example of binary genomic data (e.g. presence/absence profiles of accessory genes: Genes-100-samples.tsv)
 ```
 Gene		2015.TE.14784.1.19.1	2016.TE.28410.1.48.1	2016.TE.3350.1.18.1	2016.TE.4440.1.41.1	2018.TE.15762.1.12.1
-group_2951	absence		presence		presence		presence		presence
-rpmC		absence		presence		presence		presence		presence
-group_2936	absence		absence		absence		presence		presence
-tuf		presence		absence		absence		absence		absence
+group_2951	absence			presence		presence		presence		presence
+rpmC		absence			presence		presence		presence		presence
+group_2936	absence			absence			absence			presence		presence
+tuf		presence		absence			absence			absence			absence
 infA		presence		presence					presence		presence
 secY		presence		presence		presence		presence		presence
 rpsF		presence					presence		presence		presence
