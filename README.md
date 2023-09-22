@@ -1,7 +1,7 @@
 # Usage
-The repository GenomicBasedMachineLearning provides a R script called GenomicBasedMachineLearning.R to performe Machine Learning prediction of categorical phenotype (e.g. source attribution of miroorganisms) based on binary (e.g. presence/absence profiles of accessory genes or accessory kmers) or categorical (e.g. profiles of core alleles or core variants) genomic data.
+The repository GenomicBasedMachineLearning provides a R script called GenomicBasedMachineLearning:1.0.R to performe Machine Learning prediction of categorical phenotype (e.g. source attribution of miroorganisms) based on binary (e.g. presence/absence profiles of accessory genes or accessory kmers) or categorical (e.g. profiles of core alleles or core variants) genomic data.
 # Dependencies
-The R script GenomicBasedMachineLearning.R was prepared and tested with R version 4.3.0.
+The R script GenomicBasedMachineLearning:1.0.R was prepared and tested with R version 4.3.0.
 - require(remotes) # version 2.4.2
 - library(optparse) # version 1.7.3
 - library(caret) # version 6.0-94
@@ -94,7 +94,7 @@ sample				phenotype	dataset
 ```
 # Options
 ```
-Usage: GenomicBasedMachineLearning.R [options]
+Usage: GenomicBasedMachineLearning:1.0.R [options]
 Options:
 	-g CHARACTER, --goal=CHARACTER
 		Perform prediction and estimate accuracy from training and testing datasets through the holdout method combined with the repeated k-fold cross-validation method if the tested phenotypes are known (i.e. 'research') or perform prediction and estimate accuracy from the training dataset through the holdout method combined with the repeated k-fold cross-validation method if the tested phenotypes are unknown (i.e. 'surveillance'). [MANDATORY]
@@ -125,7 +125,7 @@ Options:
 	-o CHARACTER, --prefix=CHARACTER
 		Absolute or relative output path with or without output file prefix. [OPTIONAL, default = output_]
 	-b LOGICAL, --backup=LOGICAL
-		Save an external representation of R objects (i.e. saved_data.RData) and a short-cut of the current workspace (i.e. saved_images.RData)’. [OPTIONAL, default = FALSE]
+		Save an external representation of R objects (i.e. saved_data.RData) and a short-cut of the current workspace (i.e. saved_images.RData). [OPTIONAL, default = FALSE]
 	-h, --help
 		Show this help message and exit
 ```
@@ -179,18 +179,18 @@ quit()
 ## 3/ Launch with Rscript and different input files and/or options
 ### Call usage
 ```
-Rscript GenomicBasedMachineLearning.R
+Rscript GenomicBasedMachineLearning:1.0.R
 ```
 ### Call help
 ```
-Rscript GenomicBasedMachineLearning.R -h
+Rscript GenomicBasedMachineLearning:1.0.R -h
 ```
 ### Command examples
 ```
-Rscript --max-ppsize=500000 GenomicBasedMachineLearning.R -g research -m Genes-100-samples.Rtab -i PhenotypeDataset-100-samples.tsv -c 6 -d manual -v FALSE -f svm -o test_Rscript_genes_
+Rscript --max-ppsize=500000 GenomicBasedMachineLearning:1.0.R -g research -m Genes-100-samples.tsv -i PhenotypeDataset-100-samples.tsv -c 6 -d manual -v FALSE -f svm -o test_Rscript_genes_
 ```
 ```
-Rscript --max-ppsize=500000 GenomicBasedMachineLearning.R --goal research --mutations Alleles-100-samples.Rtab --phenotype PhenotypeDataset-100-samples.tsv --cpu 6 --dataset manual --variances FALSE --fit svm --prefix test_Rscript_alleles_
+Rscript --max-ppsize=500000 GenomicBasedMachineLearning:1.0.R --goal research --mutations Alleles-100-samples.tsv --phenotype PhenotypeDataset-100-samples.tsv --cpu 6 --dataset manual --variances FALSE --fit svm --prefix test_Rscript_alleles_
 ```
 # Install Docker image and different input files and/or options
 ## 1/ Install Docker
@@ -210,24 +210,24 @@ newgrp docker
 docker run hello-world
 ## 2/ Pull Docker image from Docker Hub
 ```
-docker pull nicolasradomski/genomicbasedmachinelearning:0.1
+docker pull nicolasradomski/genomicbasedmachinelearning:1.0
 ```
 ## 2/ Launch with Docker and different input files and options
 ### Call usage
 ```
-docker run --name nicolas --rm -u `id -u`:`id -g` nicolasradomski/genomicbasedmachinelearning:0.1
+docker run --name nicolas --rm -u `id -u`:`id -g` nicolasradomski/genomicbasedmachinelearning:1.0
 ```
 ### Call help
 ```
-docker run --name nicolas --rm -u `id -u`:`id -g` nicolasradomski/genomicbasedmachinelearning:0.1 -h
+docker run --name nicolas --rm -u `id -u`:`id -g` nicolasradomski/genomicbasedmachinelearning:1.0 -h
 ```
 ### Command examples
 
 ```
-docker run --name nicolas --rm -v $(pwd):/wk -w /wk --ulimit stack=100000000 -e R_MAX_VSIZE=25G nicolasradomski/genomicbasedmachinelearning:0.1 -g research -m /home/GenomicBasedMachineLearning/genes-100-samples.Rtab -i /home/GenomicBasedMachineLearning/PhenotypeDataset-100-samples.tsv -c 6 -d manual -v FALSE -f svm -o /home/GenomicBasedMachineLearning/output/test_Docker_genes_
+docker run --name nicolas --rm -v $(pwd):/wk -w /wk --ulimit stack=100000000 -e R_MAX_VSIZE=25G nicolasradomski/genomicbasedmachinelearning:1.0 -g research -m Genes-100-samples.tsv -i PhenotypeDataset-100-samples.tsv -c 6 -d manual -v FALSE -f svm -o test_Docker_genes_
 ```
 ```
-docker run --name nicolas --rm -v $(pwd):/wk -w /wk --ulimit stack=100000000 -e R_MAX_VSIZE=25G nicolasradomski/genomicbasedmachinelearning:0.1 --goal research --mutations /home/GenomicBasedMachineLearning/alleles-100-samples.Rtab --phenotype /home/GenomicBasedMachineLearning/PhenotypeDataset-100-samples.tsv --cpu 6 --dataset manual --variances FALSE --fit svm --prefix /home/GenomicBasedMachineLearning/output/test_Docker_alleles_
+docker run --name nicolas --rm -v $(pwd):/wk -w /wk --ulimit stack=100000000 -e R_MAX_VSIZE=25G nicolasradomski/genomicbasedmachinelearning:1.0 --goal research --mutations Alleles-100-samples.tsv --phenotype PhenotypeDataset-100-samples.tsv --cpu 6 --dataset manual --variances FALSE --fit svm --prefix test_Docker_alleles_
 ```
 # Expected output
 - model_predictors.tsv
@@ -250,9 +250,9 @@ docker run --name nicolas --rm -v $(pwd):/wk -w /wk --ulimit stack=100000000 -e 
 # Illustration
 ![workflow figure](https://github.com/Nicolas-Radomski/GenomicBasedMachineLearning/blob/main/illustration.png)
 # Reference
-- Pierluigi Castelli, Andrea De Ruvo, Andrea Bucciacchio, Nicola D'Alterio, Cesare Camma, Adriano Di Pasquale and Nicolas Radomski (2023) Source attribution of Listeria monocytogenes through a versatile supervised machine learning workflow based on genomic data (under reviewing)
+- Pierluigi Castelli, Andrea De Ruvo, Andrea Bucciacchio, Nicola D'Alterio, Cesare Camma, Adriano Di Pasquale and Nicolas Radomski (2023) Harmonization of supervised machine learning practices for efficient source attribution of Listeria monocytogenes based on genomic data. 2023, BMC Genomics, 24(560):1-19, https://doi.org/10.1186/s12864-023-09667-w
 - Docker Hub: https://hub.docker.com/r/nicolasradomski/genomicbasedmachinelearning
 # Acknowledgment
-The GENPAT-IZASM Staff for our discussions aiming at managing arguments
+The GENPAT-IZASM Staff for our discussions aiming at managing arguments and building Docker images
 # Author
 Nicolas Radomski
