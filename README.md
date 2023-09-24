@@ -58,7 +58,7 @@ cat <(head -n 1 intermediate-core.tsv) \
     <(sed -E 's@(\t)([0-9])@\1v\2@g' <(grep -v "chromosome_position" intermediate-core.tsv)) \
     >> SNPs.tsv
 ```
-#### from a cgMLST file (e.g. chewBBACA)
+#### from a cgMLST file (e.g. chewBBACA output)
 ```
 col="$(head -n 1 results_alleles.tsv | wc -w)"
 for i in $(seq 1 $col); do
@@ -68,7 +68,7 @@ cat <(head -n 1 transposed-results_alleles.tsv) \
     <(grep -v "FILE" transposed-results_alleles.tsv | tr "\t" ',' | sed 's/NIPH//g' | sed 's/NIPHEM//g' | tr ',' "\t") \
     > Alleles.tsv
 ```
-#### from a kmer file (e.g. kmtricks)
+#### from a kmer file (e.g. kmtricks output)
 ```
 cut -d$' ' -f1 list_files-fastqgz.txt > IDs-fastqgz.lst
 cat pa_matrix.txt | tr ' ' '\t' | grep -v 'info' > pa_matrix.tsv
@@ -176,7 +176,7 @@ install_version("MLeval", version = "0.3", repos = "https://cloud.r-project.org"
 install_version("MLmetrics", version = "1.1.1", repos = "https://cloud.r-project.org")
 quit()
 ```
-## 3/ Launch with Rscript and different input files and/or options
+## 2/ Launch with Rscript and different input files and/or options
 ### Call usage
 ```
 Rscript GenomicBasedMachineLearning:1.0.R
@@ -212,7 +212,7 @@ docker run hello-world
 ```
 docker pull nicolasradomski/genomicbasedmachinelearning:1.0
 ```
-## 2/ Launch with Docker and different input files and options
+## 3/ Launch with Docker and different input files and options
 ### Call usage
 ```
 docker run --name nicolas --rm -u `id -u`:`id -g` nicolasradomski/genomicbasedmachinelearning:1.0
