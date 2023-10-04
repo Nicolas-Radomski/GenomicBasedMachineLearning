@@ -252,6 +252,7 @@ docker run --name nicolas --rm -v $(pwd):/wk -w /wk --ulimit stack=100000000 -e 
 # Reference
 - Pierluigi Castelli, Andrea De Ruvo, Andrea Bucciacchio, Nicola D'Alterio, Cesare Camma, Adriano Di Pasquale and Nicolas Radomski (2023) Harmonization of supervised machine learning practices for efficient source attribution of Listeria monocytogenes based on genomic data. 2023, BMC Genomics, 24(560):1-19, https://doi.org/10.1186/s12864-023-09667-w
 - Docker Hub: https://hub.docker.com/r/nicolasradomski/genomicbasedmachinelearning
+- Additional statistical analyses: https://github.com/PCas95/GenomicBasedMachineLearning
 # Acknowledgment
 The GENPAT-IZASM Staff for our discussions aiming at managing arguments and building Docker images
 # Author
