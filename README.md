@@ -1,7 +1,7 @@
 # Usage
 The repository GenomicBasedMachineLearning provides a R script called GenomicBasedMachineLearning:1.0.R to performe Machine Learning prediction of categorical phenotype (e.g. source attribution of miroorganisms) based on binary (e.g. presence/absence profiles of accessory genes or accessory kmers) or categorical (e.g. profiles of core alleles or core variants) genomic data.
 # Dependencies
-The R script GenomicBasedMachineLearning:1.0.R was prepared and tested with R version 4.3.0.
+The R script GenomicBasedMachineLearning:1.0.R was prepared and tested with the R version 4.3.0.
 - require(remotes) # version 2.4.2
 - library(optparse) # version 1.7.3
 - library(caret) # version 6.0-94
