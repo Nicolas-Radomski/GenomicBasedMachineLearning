@@ -254,6 +254,6 @@ docker run --name nicolas --rm -v $(pwd):/wk -w /wk --ulimit stack=100000000 -e 
 - Docker Hub: https://hub.docker.com/r/nicolasradomski/genomicbasedmachinelearning
 - Additional statistical analyses: https://github.com/PCas95/GenomicBasedMachineLearning
 # Acknowledgment
-The GENPAT-IZASM Staff for our discussions aiming at managing arguments and building Docker images
+The GENPAT-IZSAM Staff for our discussions aiming at managing arguments and building Docker images
 # Author
 Nicolas Radomski
