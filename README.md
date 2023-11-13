@@ -192,7 +192,7 @@ Rscript --max-ppsize=500000 GenomicBasedMachineLearning:1.0.R -g research -m Gen
 ```
 Rscript --max-ppsize=500000 GenomicBasedMachineLearning:1.0.R --goal research --mutations Alleles-100-samples.tsv --phenotype PhenotypeDataset-100-samples.tsv --cpu 6 --dataset manual --variances FALSE --fit svm --prefix test_Rscript_alleles_
 ```
-# Install Docker image and different input files and/or options
+# Install Docker image and launch with Docker
 ## 1/ Install Docker
 ### Switch from user to administrator
 sudo su
