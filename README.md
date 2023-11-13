@@ -134,7 +134,7 @@ Options:
 git clone https://github.com/Nicolas-Radomski/GenomicBasedMachineLearning.git
 cd GenomicBasedMachineLearning
 ```
-# Install R and R libraries and launch with Rscript
+# Install R libraries and launch with Rscript
 ## 1/ Install R (Ubuntu 20.04 LTS Focal Fossa)
 ### Install additional Ubuntu libraries
 ```
