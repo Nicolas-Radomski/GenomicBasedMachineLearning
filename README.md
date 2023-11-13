@@ -129,15 +129,21 @@ Options:
 	-h, --help
 		Show this help message and exit
 ```
-# Install R (Ubuntu 20.04 LTS Focal Fossa)
-## 1/ Install additional Ubuntu libraries
+# Unpack GitHub repository and move inside
+```
+git clone https://github.com/Nicolas-Radomski/GenomicBasedMachineLearning.git
+cd GenomicBasedMachineLearning
+```
+# Install R and R libraries and launch with Rscript
+## 1/ Install R (Ubuntu 20.04 LTS Focal Fossa)
+### Install additional Ubuntu libraries
 ```
 sudo apt-get update \
     && apt-get install -y \
     libssl-dev \
     libcurl4-openssl-dev
 ```
-## 2/ Install specific R version (4.2.3)
+### Install specific R version (4.2.3)
 ```
 export R_VERSION=4.3.0
 apt install -y --no-install-recommends \
@@ -146,17 +152,11 @@ apt install -y --no-install-recommends \
   r-doc-html=${R_VERSION} \
   r-base-dev=${R_VERSION}
 ```
-## 3/ Check installed R version
+### Check installed R version
 ```
 R --version
 ```
-# Unpack GitHub repository and move inside
-```
-git clone https://github.com/Nicolas-Radomski/GenomicBasedMachineLearning.git
-cd GenomicBasedMachineLearning
-```
-# Install R dependencies and launch with Rscript
-## 1/ Install R libraries
+## 2/ Install R libraries
 ```
 R
 install.packages("remotes") # version 2.4.2
@@ -176,7 +176,7 @@ install_version("MLeval", version = "0.3", repos = "https://cloud.r-project.org"
 install_version("MLmetrics", version = "1.1.1", repos = "https://cloud.r-project.org")
 quit()
 ```
-## 2/ Launch with Rscript and different input files and/or options
+## 3/ Launch with Rscript and different input files and/or options
 ### Call usage
 ```
 Rscript GenomicBasedMachineLearning:1.0.R
