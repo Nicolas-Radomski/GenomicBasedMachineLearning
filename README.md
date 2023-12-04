@@ -49,7 +49,7 @@ L10	A2			A2			A2			A2			A2
 
 #### from a Rtab file (e.g. Panaroo output)
 ```
-cat genes.Rtab > genes.tsv
+cat Genes.Rtab > Genes.tsv
 ```
 #### from a vcf file (e.g. snippy-core output)
 ```
