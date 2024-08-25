@@ -143,7 +143,7 @@ sudo apt-get update \
     libssl-dev \
     libcurl4-openssl-dev
 ```
-### Install specific R version (4.2.3)
+### Install specific R version
 ```
 export R_VERSION=4.3.0
 apt install -y --no-install-recommends \
