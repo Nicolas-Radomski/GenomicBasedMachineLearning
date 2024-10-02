@@ -195,19 +195,33 @@ Rscript --max-ppsize=500000 GenomicBasedMachineLearning:1.0.R --goal research --
 # Install Docker image and launch with Docker
 ## 1/ Install Docker
 ### Switch from user to administrator
+```
 sudo su
+```
 ### Install Docker through snap
+```
 snap install docker
+```
 ### Switch from administrator to user
+```
 exit
+```
 ### Create a docker group called docker
+```
 sudo groupadd docker
+```
 ### Add your user to the docker group
+```
 sudo usermod -aG docker n.radomski
+```
 ### Activate the modifications of groups
+```
 newgrp docker
+```
 ### Check the proper installation
+```
 docker run hello-world
+```
 ## 2/ Pull Docker image from Docker Hub
 ```
 docker pull nicolasradomski/genomicbasedmachinelearning:1.0
